@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Restaorante.Master.cs" Inherits="Grupo_3_primer_proyecto_web.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 114px;
+        }
+        .auto-style3 {
+            width: 812px;
+        }
+        .auto-style6 {
+            height: 23px;
+            text-align: center;
+        }
+        .auto-style7 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">logo</td>
+                <td class="auto-style3">titulo, slogan,descripcion de sitio wed</td>
+                <td>logo</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">&nbsp;</td>
+                <td class="auto-style3">&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+                    <asp:TreeView ID="TreeView1" runat="server" Height="132px" Width="104px">
+                        <Nodes>
+                            <asp:TreeNode Text="USUARIOS" Value="USUARIOS">
+                                <asp:TreeNode Text="agregar usuario " Value="agregar usuario ">
+                                    <asp:TreeNode Text="lista de usuarios " Value="lista de usuarios "></asp:TreeNode>
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="EMPLEADOS" Value="EMPLEADOS"></asp:TreeNode>
+                            <asp:TreeNode Text="ACERCA DE " Value="ACERCA DE "></asp:TreeNode>
+                            <asp:TreeNode Text="AYUDA " Value="AYUDA "></asp:TreeNode>
+                        </Nodes>
+                    </asp:TreeView>
+                </td>
+                <td class="auto-style3">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="auto-style7">
+                    Titulo de los formularios<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </asp:ContentPlaceHolder>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style6" colspan="3">Pie de pagina</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
