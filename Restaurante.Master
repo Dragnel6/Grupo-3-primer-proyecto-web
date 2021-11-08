@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Restaorante.Master.cs" Inherits="Grupo_3_primer_proyecto_web.Site2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Restaurante.Master.cs" Inherits="Grupo_3_primer_proyecto_web.Site2" %>
 
 <!DOCTYPE html>
 
@@ -36,6 +36,17 @@
         .auto-style10 {
             height: 137px;
         }
+        .auto-style11 {
+            width: 114px;
+            height: 19px;
+        }
+        .auto-style12 {
+            width: 812px;
+            height: 19px;
+        }
+        .auto-style13 {
+            height: 19px;
+        }
     </style>
 </head>
 <body>
@@ -43,13 +54,13 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style8">&nbsp;</td>
-                <td class="auto-style9">titulo, slogan,descripcion de sitio wed</td>
-                <td class="auto-style10">logo</td>
+                <td class="auto-style9">Proyecto web del grupo 3</td>
+                <td class="auto-style10">Logo</td>
             </tr>
             <tr>
-                <td class="auto-style2">Menu principal </td>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style11">Menu principal </td>
+                <td class="auto-style12"></td>
+                <td class="auto-style13"></td>
             </tr>
             <tr>
                 <td class="auto-style2">
@@ -65,7 +76,7 @@
                                 <asp:TreeNode Text="Estudiante " Value="Estudiante "></asp:TreeNode>
                                 <asp:TreeNode Text="Docente " Value="Docente "></asp:TreeNode>
                             </asp:TreeNode>
-                            <asp:TreeNode Text="Consultas" Value="AYUDA "></asp:TreeNode>
+                            <asp:TreeNode Text="Consultas" Value="AYUDA " NavigateUrl="~/registro.aspx"></asp:TreeNode>
                             <asp:TreeNode Text="Usuarios" Value="Usuarios">
                                 <asp:TreeNode Text="Nuevo usuario " Value="Nuevo usuario "></asp:TreeNode>
                                 <asp:TreeNode Text="Modificar usuario " Value="Modificar usuario "></asp:TreeNode>
@@ -84,6 +95,23 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <div class="auto-style7">
                     Titulo de los formularios<br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <br />
                     <br />
                     <br />
