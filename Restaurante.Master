@@ -88,6 +88,9 @@
                                 <asp:TreeNode Text="Acerca de autor " Value="Acerca de autor "></asp:TreeNode>
                             </asp:TreeNode>
                             <asp:TreeNode Text="Derechos de propiedad " Value="Derechos de propiedad "></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/registro.aspx" Text="Login" Value="Login">
+                                <asp:TreeNode NavigateUrl="~/usuarios.aspx" Text="Agregar_usuarios" Value="Agregar_usuarios"></asp:TreeNode>
+                            </asp:TreeNode>
                         </Nodes>
                     </asp:TreeView>
                 </td>

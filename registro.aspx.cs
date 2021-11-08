@@ -17,8 +17,6 @@ namespace Grupo_3_primer_proyecto_web
          
         }
 
-        //SqlConnection conexion = new SqlConnection("server = LAPTOP-JCD60568; database = sistema; Integrated Security = true");
-
         protected void btIngresar_Click(object sender, EventArgs e)
         {
 
@@ -68,7 +66,7 @@ namespace Grupo_3_primer_proyecto_web
                 {
                     Session["autorizado"] = usuario;
                     //Session("autorizado") = usuario;
-                    Response.Redirect("~/index.aspx");
+                    Response.Redirect("~/usuarios.aspx");
 
                     //Cerramos la conexion
                     conexion.Close();

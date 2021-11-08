@@ -37,7 +37,7 @@
     <form id="form1" runat="server">
         <div>
             <div class="auto-style2">
-                Registro de usuarios</div>
+                Ingreso de usuarios</div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style4">Usuario</td>
@@ -72,7 +72,7 @@
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sistemaConnectionString %>" SelectCommand="SELECT [Usuario], [Contrasena] FROM [ingreso]"></asp:SqlDataSource>
                     </td>
                 </tr>
             </table>
