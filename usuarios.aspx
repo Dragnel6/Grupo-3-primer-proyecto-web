@@ -16,12 +16,11 @@
         .auto-style3 {
             width: 529px;
         }
-        .auto-style4 {
-            width: 529px;
-            height: 29px;
-        }
         .auto-style5 {
             height: 29px;
+        }
+        .auto-style7 {
+            height: 26px;
         }
     </style>
 </head>
@@ -31,56 +30,50 @@
             Registro de usuarios<br />
             <table class="auto-style2">
                 <tr>
-                    <td class="auto-style3">Nombre de usuario</td>
-                    <td>Escriba un nombre de usuario</td>
+                    <td colspan="2">Escriba un nombre de usuario</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">
+                    <td colspan="2">
                         <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">Tipo de usuario</td>
-                    <td>Selecciona el tipo de usuario</td>
+                    <td colspan="2">Selecciona el tipo de usuario</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">
-                        <asp:TextBox ID="txtTipo" runat="server"></asp:TextBox>
+                    <td colspan="2">
+                        <asp:DropDownList ID="ddlTipo" runat="server" DataSourceID="SqlDataSource2" DataTextField="tipo_empleado" DataValueField="tipo_empleado">
+                        </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:sistemaConnectionString %>" SelectCommand="SELECT [tipo_empleado] FROM [cargos]"></asp:SqlDataSource>
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">Clave</td>
-                    <td>Escriba una clave</td>
+                    <td class="auto-style7" colspan="2">Escriba una clave</td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">
+                    <td class="auto-style5" colspan="2">
                         <asp:TextBox ID="txtClave" runat="server"></asp:TextBox>
                     </td>
-                    <td class="auto-style5"></td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">Confirme su clave</td>
-                    <td>Confirme su clave</td>
+                    <td class="auto-style7" colspan="2">Confirme su clave</td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">
+                    <td colspan="2">
                         <asp:TextBox ID="txtClaveCon" runat="server"></asp:TextBox>
                     </td>
-                    <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>

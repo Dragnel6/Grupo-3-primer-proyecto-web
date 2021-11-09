@@ -16,20 +16,16 @@
         .auto-style3 {
             width: 259px;
         }
-        .auto-style4 {
-            width: 39px;
-            text-align: center;
-        }
-        .auto-style5 {
-            width: 259px;
-            height: 26px;
-        }
         .auto-style6 {
             width: 39px;
         }
         .auto-style7 {
-            width: 39px;
             height: 26px;
+            text-align: center;
+        }
+        .auto-style8 {
+            text-align: center;
+            height: 42px;
         }
     </style>
 </head>
@@ -40,12 +36,12 @@
                 Ingreso de usuarios</div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style4">Usuario</td>
-                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style2" colspan="2">
+                        <br />
+                        Usuario</td>
                 </tr>
                 <tr>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style3">
+                    <td class="auto-style2" colspan="2">
                         <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox>
                     </td>
                 </tr>
@@ -54,14 +50,12 @@
                     <td class="auto-style3">&nbsp;</td>
                 </tr>
                 <tr>
-                    <td class="auto-style4">Contraseña</td>
-                    <td class="auto-style3">
-                        <asp:TextBox ID="txtContra" runat="server"></asp:TextBox>
-                    </td>
+                    <td class="auto-style2" colspan="2">Contraseña</td>
                 </tr>
                 <tr>
-                    <td class="auto-style7"></td>
-                    <td class="auto-style5"></td>
+                    <td class="auto-style7" colspan="2">
+                        <asp:TextBox ID="txtContra" runat="server"></asp:TextBox>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">
@@ -71,7 +65,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" colspan="2">
+                    <td class="auto-style8" colspan="2">
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sistemaConnectionString %>" SelectCommand="SELECT [Usuario], [Contrasena] FROM [ingreso]"></asp:SqlDataSource>
                     </td>
                 </tr>

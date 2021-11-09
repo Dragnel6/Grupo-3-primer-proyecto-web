@@ -19,7 +19,7 @@ namespace Grupo_3_primer_proyecto_web
         protected void btRegistrar_Click(object sender, EventArgs e)
         {
             /*Este primer segmento de codigo es para determinar si ya tenemos el usuario registrado,
-            *la mayoria de sistemas web se valida el usuario por medio de su nombre de usuario o correo.
+              la mayoria de sistemas web se valida el usuario por medio de su nombre de usuario o correo.
               
             creamos la variable conexion con la cadena del Origen de Datos Que podemos ver aqui, bueno que usando el sqlDataSourcel creado podemos iniciar
             la conexion a la base de datos.*/
@@ -29,13 +29,13 @@ namespace Grupo_3_primer_proyecto_web
             //Creamos una variable usuario para almacenar el usuario ingresado sin espacios
             string usuario;
 
-            //Quitamos cualquier espacio digitado en el campo con la funcion TRIM 'Es recomendable aplicar TRIM aunque podria funcionar son usarla.
+            //Quitamos cualquier espacio digitado en el campo con la funcion TRIM Es recomendable aplicar TRIM aunque podria funcionar son usarla.
             //Quite el Trim porque daba error.
             usuario = (txtUsuario.Text);
 
-            //'Creamos la variable de consulta_comprobar y le asignamos la cadena de consulta 'Aqui comparamos si existe el nombre de usuario
+            //Creamos la variable de consulta_comprobar y le asignamos la cadena de consulta Aqui comparamos si existe el nombre de usuario
 
-            SqlCommand consulta_comprobar = new SqlCommand("SELECT * FROM usuario WHERE nombre = @usuario", conexion);
+            SqlCommand consulta_comprobar = new SqlCommand("SELECT * FROM ingreso WHERE Usuario = @usuario", conexion);
 
             //Abrimos la conexión
             conexion.Open();
@@ -43,10 +43,10 @@ namespace Grupo_3_primer_proyecto_web
             //Asignamos a un parametro el valor del campo correo ingresado para pasarlo a la consulta
             consulta_comprobar.Parameters.AddWithValue("@usuario", usuario);
             
-            //'Creamos la variable i para contar los registros encontrados
+            //Creamos la variable i para contar los registros encontrados
             int i;
 
-            //Con la funcion ExecuteScalar determinamos cuantos registros hay 'Si tenemos al menos uno es que ya existe un usuario que usa el correo 'ingresado
+            //Con la funcion ExecuteScalar determinamos cuantos registros hay Si tenemos al menos uno es que ya existe un usuario que usa el correo ingresado
             i = System.Convert.ToInt32(consulta_comprobar.ExecuteScalar());
 
             //'Tomamos la desicion si existe o no
@@ -59,24 +59,24 @@ namespace Grupo_3_primer_proyecto_web
                 conexion.Close();
 
                 //########################################################################
-                //'Si El usuario no existe, lo añadimos, se ejecuta la condicional else Else
+                //Si El usuario no existe, lo añadimos, se ejecuta la condicional else Else
             }
             else
             {
                 string cadenaconsulta;
                 cadenaconsulta = "insert into ingreso(Usuario, Contrasena, tipo) values(@usuario,@clave, @tipo)";
 
-                //'Usamos el comando Insert del DataSource
+                //Usamos el comando Insert del DataSource
                 SqlCommand consulta_agregar = new SqlCommand(cadenaconsulta, conexion);
-                SqlCommand consulta = new SqlCommand(cadenaconsulta, conexion);
+                //SqlCommand consulta = new SqlCommand(cadenaconsulta, conexion);
 
                 consulta_agregar.Parameters.AddWithValue("@usuario", txtUsuario.Text);
                 consulta_agregar.Parameters.AddWithValue("@clave", txtClave.Text);
-                consulta_agregar.Parameters.AddWithValue("@tipo", txtTipo.Text);
+                consulta_agregar.Parameters.AddWithValue("@tipo", ddlTipo.Text);
                
                 try
                 {
-                    //Ejecutamos la consulta que agrega los datos pasados en los parametros 'a los campos de la tabla
+                    //Ejecutamos la consulta que agrega los datos pasados en los parametros a los campos de la tabla
                     consulta_agregar.ExecuteNonQuery();
                     //Cerramos la conexión 
                     conexion.Close();
@@ -88,15 +88,19 @@ namespace Grupo_3_primer_proyecto_web
                 catch 
                 {
 
-                    //'Para presentarlo en una etiqueta, evitamos error de compilacion Me
+                    //Para presentarlo en una etiqueta, evitamos error de compilacion Me
                     //La funcion Catch permite capturar cualquier error al intentar guardar
                     this.lblUsuarios.Text = "Error al intentar guardar";
-
                 }
 
             }
 
 
+
+        }
+
+        protected void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

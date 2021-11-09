@@ -26,30 +26,26 @@ namespace Grupo_3_primer_proyecto_web
             if (txtUsuario.Text != "" & txtContra.Text != "")
             {
 
-                // creamos la variable conexion con la cadena del Origen de datos Creado Que podemos ver aqui, bueno que usando el sqlDataSource creado podemos iniciar la conexion a la base de datos. 
+                //Creamos la variable conexion con la cadena del origen de datos creado que podemos ver aqui,
+                //bueno que usando el sqlDataSource creado podemos iniciar la conexion a la base de datos. 
                 SqlConnection conexion = new SqlConnection(this.SqlDataSource1.ConnectionString);
 
-                // Quitamos cualquier espacio digitado en el campo con la funcion TRIM 'Es recomendable aplicar TRIM aunque podria funcionar son usarla. 
-            
+                //Quitamos cualquier espacio digitado en el campo con la funcion TRIM Es recomendable aplicar TRIM aunque podria funcionar son usarla. 
+
                 //Quite los "Trim" porque daban error
                 usuario = (txtUsuario.Text);
                 clave = (txtContra.Text);
 
-                // Creamos la variable de consulta y le asignamos precisamente la consulta
-
+                //Creamos la variable de consulta y le asignamos precisamente la consulta
                 //Aqui comparamos si existe la direccion de correo
-
-                /*SqlCommand com = new SqlCommand("select Usuario, Contrasena from Empleado where Usuario = @user AND Contrasena = @pass", conexion);
-                com.Parameters.AddWithValue("@user", txtusuario.Text);
-                com.Parameters.AddWithValue("@pass", txtcontra.Text);*/
 
                 string cadena = "SELECT * FROM ingreso WHERE Usuario = @nombre and Contrasena = @clave";
                 SqlCommand consulta_comprobar = new SqlCommand(cadena, conexion);
 
-                // Abrimos la conexión
+                //Abrimos la conexión
                 conexion.Open();
 
-                // Asignamos a un parametro el valor del campo correo ingresado para pasarlo a la consulta
+                //Asignamos a un parametro el valor del campo correo ingresado para pasarlo a la consulta
                 consulta_comprobar.Parameters.AddWithValue("@nombre", usuario);
                 consulta_comprobar.Parameters.AddWithValue("@clave", clave);
                 
@@ -67,7 +63,7 @@ namespace Grupo_3_primer_proyecto_web
                     Session["autorizado"] = usuario;
                     //Session("autorizado") = usuario;
                     Response.Redirect("~/usuarios.aspx");
-
+                    
                     //Cerramos la conexion
                     conexion.Close();
                 }
