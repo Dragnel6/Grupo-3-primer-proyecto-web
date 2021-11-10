@@ -22,13 +22,24 @@
         .auto-style7 {
             height: 26px;
         }
+        .auto-style8 {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="auto-style1">
-            Registro de usuarios<br />
+            <br />
             <table class="auto-style2">
+                <tr>
+                    <td colspan="2" class="auto-style8">
+                        <asp:Button ID="btPrincipal" runat="server" Height="33px" OnClick="btPrincipal_Click" Text="Principal" Width="125px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="auto-style1">Registro de usuarios</td>
+                </tr>
                 <tr>
                     <td colspan="2">Escriba un nombre de usuario</td>
                 </tr>

@@ -13,7 +13,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 114px;
+            width: 125px;
         }
         .auto-style3 {
             width: 812px;
@@ -26,18 +26,19 @@
             text-align: center;
         }
         .auto-style8 {
-            width: 114px;
+            width: 125px;
             height: 137px;
         }
         .auto-style9 {
             width: 812px;
             height: 137px;
+            text-align: center;
         }
         .auto-style10 {
             height: 137px;
         }
         .auto-style11 {
-            width: 114px;
+            width: 125px;
             height: 19px;
         }
         .auto-style12 {
@@ -55,7 +56,7 @@
             <tr>
                 <td class="auto-style8">&nbsp;</td>
                 <td class="auto-style9">Proyecto web del grupo 3</td>
-                <td class="auto-style10">Logo</td>
+                <td class="auto-style10">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style11">Menu principal </td>
@@ -66,7 +67,7 @@
                 <td class="auto-style2">
                     <asp:TreeView ID="TreeView1" runat="server" Height="132px" Width="104px">
                         <Nodes>
-                            <asp:TreeNode Text="Ir a principal" Value="USUARIOS"></asp:TreeNode>
+                            <asp:TreeNode Text="Ir a principal" Value="USUARIOS" NavigateUrl="~/Pagina_home.aspx"></asp:TreeNode>
                             <asp:TreeNode Text="Administracion " Value="EMPLEADOS">
                                 <asp:TreeNode Text="Agregar unidad " Value="Agregar unidad "></asp:TreeNode>
                                 <asp:TreeNode Text="Agregar puesto " Value="Agregar puesto "></asp:TreeNode>
@@ -89,7 +90,9 @@
                             </asp:TreeNode>
                             <asp:TreeNode Text="Derechos de propiedad " Value="Derechos de propiedad "></asp:TreeNode>
                             <asp:TreeNode NavigateUrl="~/registro.aspx" Text="Login" Value="Login">
-                                <asp:TreeNode NavigateUrl="~/usuarios.aspx" Text="Agregar_usuarios" Value="Agregar_usuarios"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/usuarios.aspx" Text="agregar usuarios" Value="agregar usuarios"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Ayuda.aspx" Text="Ayuda" Value="Ayuda"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/About.aspx" Text="Acerca de" Value="Acerca de"></asp:TreeNode>
                             </asp:TreeNode>
                         </Nodes>
                     </asp:TreeView>
@@ -125,7 +128,10 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style6" colspan="3">Pie de pagina</td>
+                <td class="auto-style6" colspan="3">
+                    <br />
+                    <br />
+                    Grupo 3, aplicacion asp net</td>
             </tr>
         </table>
     </form>

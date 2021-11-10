@@ -98,10 +98,15 @@ namespace Grupo_3_primer_proyecto_web
 
 
         }
+        protected void btPrincipal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pagina_home.aspx");
+        }
 
         protected void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }
+
     }
 }

@@ -75,5 +75,10 @@ namespace Grupo_3_primer_proyecto_web
             }
 
         }
+
+        protected void btHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Pagina_home.aspx");
+        }
     }
 }
