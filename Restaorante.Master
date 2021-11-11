@@ -36,6 +36,17 @@
         .auto-style10 {
             height: 137px;
         }
+        .auto-style11 {
+            width: 114px;
+            height: 23px;
+        }
+        .auto-style12 {
+            width: 812px;
+            height: 23px;
+        }
+        .auto-style13 {
+            height: 23px;
+        }
     </style>
 </head>
 <body>
@@ -43,13 +54,13 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style8">&nbsp;</td>
-                <td class="auto-style9">titulo, slogan,descripcion de sitio wed</td>
+                <td class="auto-style9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PIZZERIA</td>
                 <td class="auto-style10">logo</td>
             </tr>
             <tr>
-                <td class="auto-style2">Menu principal </td>
-                <td class="auto-style3">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style11">Menu principal </td>
+                <td class="auto-style12"></td>
+                <td class="auto-style13"></td>
             </tr>
             <tr>
                 <td class="auto-style2">
@@ -57,13 +68,13 @@
                         <Nodes>
                             <asp:TreeNode Text="Ir a principal" Value="USUARIOS"></asp:TreeNode>
                             <asp:TreeNode Text="Administracion " Value="EMPLEADOS">
-                                <asp:TreeNode Text="Agregar unidad " Value="Agregar unidad "></asp:TreeNode>
-                                <asp:TreeNode Text="Agregar puesto " Value="Agregar puesto "></asp:TreeNode>
-                                <asp:TreeNode Text="Agregar carrera " Value="Agregar carrera "></asp:TreeNode>
+                                <asp:TreeNode Text="Agregar Orden " Value="Agregar Orden "></asp:TreeNode>
+                                <asp:TreeNode Text="Ofertas " Value="Ofertas "></asp:TreeNode>
+                                <asp:TreeNode Text="Inventario " Value="Inventario "></asp:TreeNode>
                             </asp:TreeNode>
                             <asp:TreeNode Text="Agregar informacion " Value="ACERCA DE ">
-                                <asp:TreeNode Text="Estudiante " Value="Estudiante "></asp:TreeNode>
-                                <asp:TreeNode Text="Docente " Value="Docente "></asp:TreeNode>
+                                <asp:TreeNode Text="Clientes " Value="Clientes "></asp:TreeNode>
+                                <asp:TreeNode Text="Empleado " Value="Empleado "></asp:TreeNode>
                             </asp:TreeNode>
                             <asp:TreeNode Text="Consultas" Value="AYUDA "></asp:TreeNode>
                             <asp:TreeNode Text="Usuarios" Value="Usuarios">
@@ -73,7 +84,7 @@
                             </asp:TreeNode>
                             <asp:TreeNode Text="Ayuda " Value="Ayuda ">
                                 <asp:TreeNode Text="Temas de ayuda " Value="Temas de ayuda "></asp:TreeNode>
-                                <asp:TreeNode Text="Acerca de sigUGB " Value="Acerca de sigUGB "></asp:TreeNode>
+                                <asp:TreeNode Text="Acerca de " Value="Acerca de "></asp:TreeNode>
                                 <asp:TreeNode Text="Acerca de autor " Value="Acerca de autor "></asp:TreeNode>
                             </asp:TreeNode>
                             <asp:TreeNode Text="Derechos de propiedad " Value="Derechos de propiedad "></asp:TreeNode>
@@ -83,7 +94,18 @@
                 <td class="auto-style3">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <div class="auto-style7">
-                    Titulo de los formularios<br />
+                    INGRESAR<br />
+&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Usuario
+                    <asp:TextBox ID="TextBox3" runat="server" Width="131px"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br />
+                    Contraseña <asp:TextBox ID="TextBox4" runat="server" Width="164px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:Button ID="Button1" runat="server" Text="Ingresar" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" runat="server" Text="Olvide mi usuario o contraseña" Width="183px" />
                     <br />
                     <br />
                     <br />
