@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Grupo_3_primer_proyecto_web
 {
-    public partial class _Default : Page
+    public partial class Pagina_home : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
     }
 }

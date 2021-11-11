@@ -11,7 +11,7 @@ namespace Grupo_3_primer_proyecto_web
 {
 
 
-    public partial class About
+    public partial class Contact
     {
     }
 }
