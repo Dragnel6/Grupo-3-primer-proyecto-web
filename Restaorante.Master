@@ -95,6 +95,7 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <div class="auto-style7">
                     INGRESAR<br />
+                    o<br />
 &nbsp;<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Usuario
                     <asp:TextBox ID="TextBox3" runat="server" Width="131px"></asp:TextBox>
