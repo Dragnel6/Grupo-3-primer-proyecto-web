@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="Styles/Main.css" rel="stylesheet" type="text/css" />
     </asp:ContentPlaceHolder>
     <style type="text/css">
         .auto-style1 {
@@ -33,9 +34,13 @@
             width: 812px;
             height: 137px;
             text-align: center;
+            font-size: xx-large;
         }
         .auto-style10 {
             height: 137px;
+        }
+        .auto-style11 {
+            font-size: xx-large;
         }
     </style>
 </head>
@@ -45,7 +50,7 @@
             <tr>
                 <td class="auto-style8">&nbsp;</td>
                 <td class="auto-style9">PIZZERIA</td>
-                <td class="auto-style10">logo</td>
+                <td class="auto-style10">&nbsp;</td>
             </tr>
             <tr>
                 <td class="auto-style11">Menu principal </td>
@@ -54,7 +59,7 @@
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:TreeView ID="TreeView1" runat="server" Height="132px" Width="104px">
+                    <asp:TreeView ID="TreeView1" runat="server" Height="132px" Width="104px" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged">
                         <Nodes>
                             <asp:TreeNode Text="Ir a principal" Value="USUARIOS" NavigateUrl="~/Pagina_home.aspx"></asp:TreeNode>
                             <asp:TreeNode Text="Administracion " Value="EMPLEADOS">
@@ -130,9 +135,24 @@
             </tr>
             <tr>
                 <td class="auto-style6" colspan="3">
+                    <span class="auto-style11">
                     <br />
                     <br />
-                    Grupo 3, aplicacion asp net</td>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    Grupo 3, aplicacion asp net<br />
+                    </span></td>
             </tr>
         </table>
     </form>

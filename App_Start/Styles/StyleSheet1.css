@@ -1,0 +1,19 @@
+﻿body {
+    background: url("'../imagenes/pizza hd full.jpg'") no-repeat 0 10%;
+    padding: 2px 20px 2px 20px;
+}
+#h1{
+    font:"trebuchet Ms ", Verdana, sans-serift;
+    background-color:#000000;
+    color:#696969;
+}
+#h2{
+    border-bottom: 3px solid #cc9900;
+    font: Georgia, serift;
+    color:#996600;
+}
+#main{
+    padding: 40px;
+    background-color:#ff6a00;
+    border-radius:0px 4px 4px 4px;
+}
