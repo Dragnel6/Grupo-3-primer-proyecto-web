@@ -13,7 +13,7 @@ namespace Grupo_3_primer_proyecto_web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Data Source=JUBEI;Initial Catalog=pro1_db;Integrated Security=True
         }
 
         protected void btRegistrar_Click(object sender, EventArgs e)

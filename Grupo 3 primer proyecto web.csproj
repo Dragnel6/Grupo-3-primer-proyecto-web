@@ -160,6 +160,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Tablas.aspx" />
     <Content Include="usuarios.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -226,6 +227,13 @@
     </Compile>
     <Compile Include="Restaurante.Master.designer.cs">
       <DependentUpon>Restaurante.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tablas.aspx.cs">
+      <DependentUpon>Tablas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tablas.aspx.designer.cs">
+      <DependentUpon>Tablas.aspx</DependentUpon>
     </Compile>
     <Compile Include="usuarios.aspx.cs">
       <DependentUpon>usuarios.aspx</DependentUpon>
