@@ -35,13 +35,15 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div class="auto-style2">
-                Ingreso de usuarios</div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style9" colspan="2">
-                        <asp:Button ID="btHome" runat="server" Height="42px" OnClick="btHome_Click" Text="Principal" Width="131px" />
+                        <asp:Button ID="btHome" runat="server" Height="33px" OnClick="btHome_Click" Text="Principal" Width="125px" />
                     </td>
+                </tr>
+                <tr>
+                    <td class="auto-style2" colspan="2">
+                Ingreso de usuarios</td>
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">

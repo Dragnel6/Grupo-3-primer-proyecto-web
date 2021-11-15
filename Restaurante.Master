@@ -14,7 +14,7 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 125px;
+            width: 255px;
         }
         .auto-style3 {
             width: 812px;
@@ -27,7 +27,7 @@
             text-align: center;
         }
         .auto-style8 {
-            width: 125px;
+            width: 255px;
             height: 137px;
         }
         .auto-style9 {
@@ -42,6 +42,18 @@
         .auto-style11 {
             font-size: xx-large;
         }
+        .auto-style12 {
+            font-size: xx-large;
+            width: 127px;
+        }
+        .auto-style13 {
+            font-size: xx-large;
+            width: 131px;
+        }
+        .auto-style14 {
+            font-size: xx-large;
+            width: 255px;
+        }
     </style>
 </head>
 <body>
@@ -49,19 +61,20 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style8">&nbsp;</td>
-                <td class="auto-style9">PIZZERIA</td>
+                <td class="auto-style9">Restaurante</td>
                 <td class="auto-style10">&nbsp;</td>
             </tr>
             <tr>
-                <td class="auto-style11">Menu principal </td>
+                <td class="auto-style14">Menu principal </td>
                 <td class="auto-style12"></td>
                 <td class="auto-style13"></td>
             </tr>
             <tr>
                 <td class="auto-style2">
-                    <asp:TreeView ID="TreeView1" runat="server" Height="132px" Width="104px" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged">
+                    <asp:TreeView ID="TreeView1" runat="server" Height="132px" Width="104px" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ImageSet="Arrows">
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
                         <Nodes>
-                            <asp:TreeNode Text="Ir a principal" Value="USUARIOS" NavigateUrl="~/Pagina_home.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="Ir a principal" Value="USUARIOS" NavigateUrl="~/Principal.aspx"></asp:TreeNode>
                             <asp:TreeNode Text="Administracion " Value="EMPLEADOS">
                                 <asp:TreeNode Text="Agregar Orden " Value="Agregar Orden "></asp:TreeNode>
                                 <asp:TreeNode Text="Ofertas " Value="Ofertas "></asp:TreeNode>
@@ -88,7 +101,11 @@
                                 <asp:TreeNode NavigateUrl="~/Ayuda.aspx" Text="Ayuda" Value="Ayuda"></asp:TreeNode>
                                 <asp:TreeNode NavigateUrl="~/About.aspx" Text="Acerca de" Value="Acerca de"></asp:TreeNode>
                             </asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/Tablas.aspx" Text="Tablas" Value="Tablas"></asp:TreeNode>
                         </Nodes>
+                        <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                        <ParentNodeStyle Font-Bold="False" />
+                        <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
                     </asp:TreeView>
                 </td>
                 <td class="auto-style3">

@@ -41,6 +41,9 @@
                     <td colspan="2" class="auto-style1">Registro de usuarios</td>
                 </tr>
                 <tr>
+                    <td colspan="2" class="auto-style1">&nbsp;</td>
+                </tr>
+                <tr>
                     <td colspan="2">Escriba un nombre de usuario</td>
                 </tr>
                 <tr>

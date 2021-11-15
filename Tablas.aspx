@@ -35,6 +35,17 @@
             width: 541px;
             height: 26px;
         }
+        .auto-style9 {
+            width: 541px;
+            height: 67px;
+        }
+        .auto-style10 {
+            width: 384px;
+            height: 67px;
+        }
+        .auto-style11 {
+            height: 67px;
+        }
     </style>
 </head>
 <body>
@@ -42,7 +53,9 @@
         <div>
             <table class="auto-style1">
                 <tr>
-                    <td class="auto-style7">&nbsp;</td>
+                    <td class="auto-style7">
+                        <asp:Button ID="btHomeTa" runat="server" Height="33px" OnClick="btHome_Click" Text="Principal" Width="125px" />
+                    </td>
                     <td class="auto-style5">Tablas de consulta</td>
                     <td>&nbsp;</td>
                 </tr>
@@ -52,31 +65,28 @@
                     <td class="auto-style4"></td>
                 </tr>
                 <tr>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="nombre_departamento" DataValueField="iddepartamento">
+                    <td class="auto-style9"></td>
+                    <td class="auto-style10"></td>
+                    <td class="auto-style11">
+                        <asp:DropDownList ID="ddlLisTabla" runat="server" DataSourceID="SqlDataSource2" DataTextField="nombre_area" DataValueField="nombre_area" AutoPostBack="True">
                         </asp:DropDownList>
-                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:pro1_dbConnectionString %>" SelectCommand="SELECT * FROM [t_departamento]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:sistemaConnectionString %>" SelectCommand="SELECT * FROM [areas]"></asp:SqlDataSource>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style6">&nbsp;</td>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td class="auto-style8"></td>
+                    <td class="auto-style3"></td>
+                    <td class="auto-style4"></td>
                 </tr>
                 <tr>
                     <td class="auto-style7">
                         <asp:GridView ID="gvTabla" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="202px" Width="322px" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
-                                <asp:BoundField DataField="idcanton" HeaderText="idcanton" SortExpression="idcanton" />
-                                <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
-                                <asp:BoundField DataField="altura" HeaderText="altura" SortExpression="altura" />
-                                <asp:BoundField DataField="latitud" HeaderText="latitud" SortExpression="latitud" />
-                                <asp:BoundField DataField="longitud" HeaderText="longitud" SortExpression="longitud" />
-                                <asp:BoundField DataField="iddepartamento" HeaderText="iddepartamento" SortExpression="iddepartamento" />
-                                <asp:BoundField DataField="idmunicipio" HeaderText="idmunicipio" SortExpression="idmunicipio" />
+                                <asp:BoundField DataField="idEmpleado" HeaderText="idEmpleado" SortExpression="idEmpleado" />
+                                <asp:BoundField DataField="nombre_empleado" HeaderText="nombre_empleado" SortExpression="nombre_empleado" />
+                                <asp:BoundField DataField="tipo_empleado" HeaderText="tipo_empleado" SortExpression="tipo_empleado" />
+                                <asp:BoundField DataField="puesto" HeaderText="puesto" SortExpression="puesto" />
                             </Columns>
                             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
                             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
@@ -88,11 +98,15 @@
                             <SortedDescendingCellStyle BackColor="#FCF6C0" />
                             <SortedDescendingHeaderStyle BackColor="#820000" />
                         </asp:GridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pro1_dbConnectionString %>" SelectCommand="SELECT * FROM [t_canton]"></asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sistemaConnectionString %>" SelectCommand="SELECT * FROM [puestos] WHERE ([tipo_empleado] = @tipo_empleado)">
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="ddlLisTabla" Name="tipo_empleado" PropertyName="SelectedValue" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
                     </td>
                     <td class="auto-style5">
                         &nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td aria-haspopup="True">&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style6">&nbsp;</td>
