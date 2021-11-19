@@ -7,10 +7,9 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-
 namespace Grupo_3_primer_proyecto_web
 {
-    public partial class Usuarios : System.Web.UI.Page
+    public partial class usuarios : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,12 +19,12 @@ namespace Grupo_3_primer_proyecto_web
         protected void btRegistrar_Click(object sender, EventArgs e)
         {
             /*Este primer segmento de codigo es para determinar si ya tenemos el usuario registrado,
-            la mayoria de sistemas web se valida el usuario por medio de su nombre de usuario o correo.
-
-             creamos la variable conexion con la cadena del Origen de Datos Que podemos ver aqui, bueno que usando el sqlDataSourcel creado podemos iniciar
-              la conexion a la base de datos.*/
-
-            SqlConnection conexion = new SqlConnection(this.SqlDataSource2.ConnectionString);
+              la mayoria de sistemas web se valida el usuario por medio de su nombre de usuario o correo.
+              
+            creamos la variable conexion con la cadena del Origen de Datos Que podemos ver aqui, bueno que usando el sqlDataSourcel creado podemos iniciar
+            la conexion a la base de datos.*/
+            
+            SqlConnection conexion = new SqlConnection(this.SqlDataSource1.ConnectionString);
 
             //Creamos una variable usuario para almacenar el usuario ingresado sin espacios
             string usuario;
@@ -43,7 +42,7 @@ namespace Grupo_3_primer_proyecto_web
 
             //Asignamos a un parametro el valor del campo correo ingresado para pasarlo a la consulta
             consulta_comprobar.Parameters.AddWithValue("@usuario", usuario);
-
+            
             //Creamos la variable i para contar los registros encontrados
             int i;
 
@@ -74,7 +73,7 @@ namespace Grupo_3_primer_proyecto_web
                 consulta_agregar.Parameters.AddWithValue("@usuario", txtUsuario.Text);
                 consulta_agregar.Parameters.AddWithValue("@clave", txtClave.Text);
                 consulta_agregar.Parameters.AddWithValue("@tipo", ddlTipo.Text);
-
+               
                 try
                 {
                     //Ejecutamos la consulta que agrega los datos pasados en los parametros a los campos de la tabla
@@ -84,9 +83,9 @@ namespace Grupo_3_primer_proyecto_web
 
                     //Presentamos el mensaje que se agrego con exito el nuevo usuario
                     this.lblUsuarios.Text = "Se agregó el nuevo usuario correctamente";
-
+                    
                 }
-                catch
+                catch 
                 {
 
                     //Para presentarlo en una etiqueta, evitamos error de compilacion Me
@@ -94,8 +93,20 @@ namespace Grupo_3_primer_proyecto_web
                     this.lblUsuarios.Text = "Error al intentar guardar";
                 }
 
-                
             }
+
+
+
         }
+        protected void btPrincipal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Principal.aspx");
+        }
+
+        protected void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

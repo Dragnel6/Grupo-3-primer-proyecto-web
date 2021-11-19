@@ -30,6 +30,10 @@
         .auto-style9 {
             text-align: left;
         }
+        .auto-style10 {
+            text-align: center;
+            height: 121px;
+        }
     </style>
 </head>
 <body>
@@ -38,8 +42,15 @@
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style9" colspan="2">
-                        <asp:Button ID="btHome" runat="server" Height="33px" OnClick="btHome_Click" Text="Principal" Width="125px" />
-                    </td>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style9" colspan="2">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style9" colspan="2">
+                        &nbsp;</td>
                 </tr>
                 <tr>
                     <td class="auto-style2" colspan="2">
@@ -68,9 +79,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" colspan="2">
+                    <td class="auto-style10" colspan="2">
                         <br />
-                        <asp:Button ID="btIngresar" runat="server" Height="43px" OnClick="btIngresar_Click" Text="Ingresar" Width="107px" />
+                        <asp:Button ID="btIngresar" runat="server" Height="51px" OnClick="btIngresar_Click" Text="Ingresar" Width="113px" />
                         <br />
                         <br />
                         <asp:Label ID="lblLogin" runat="server" Text="Label"></asp:Label>
@@ -82,7 +93,6 @@
                     </td>
                 </tr>
             </table>
-            <br />
         </div>
     </form>
 </body>

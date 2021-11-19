@@ -54,54 +54,73 @@
             font-size: xx-large;
             width: 255px;
         }
+        .auto-style15 {
+            height: 23px;
+            text-align: center;
+            width: 88px;
+        }
+        .auto-style16 {
+            width: 88px;
+            height: 137px;
+        }
+        .auto-style18 {
+            width: 88px;
+        }
+        .auto-style19 {
+            font-size: xx-large;
+            width: 88px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <table class="auto-style1">
             <tr>
+                <td class="auto-style16">&nbsp;</td>
                 <td class="auto-style8">&nbsp;</td>
                 <td class="auto-style9">Restaurante</td>
                 <td class="auto-style10">&nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style19">&nbsp;</td>
                 <td class="auto-style14">Menu principal </td>
                 <td class="auto-style12"></td>
                 <td class="auto-style13"></td>
             </tr>
             <tr>
+                <td class="auto-style18">
+                    &nbsp;</td>
                 <td class="auto-style2">
-                    <asp:TreeView ID="TreeView1" runat="server" Height="132px" Width="104px" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ImageSet="Arrows">
+                    <asp:TreeView ID="TrViMenu" runat="server" Height="132px" Width="104px" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" ImageSet="BulletedList4" ShowExpandCollapse="False" ForeColor="#99CCFF">
                         <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
                         <Nodes>
                             <asp:TreeNode Text="Ir a principal" Value="USUARIOS" NavigateUrl="~/Principal.aspx"></asp:TreeNode>
-                            <asp:TreeNode Text="Administracion " Value="EMPLEADOS">
+                            <asp:TreeNode Text="Administracion " Value="EMPLEADOS" Expanded="False">
                                 <asp:TreeNode Text="Agregar Orden " Value="Agregar Orden "></asp:TreeNode>
                                 <asp:TreeNode Text="Ofertas " Value="Ofertas "></asp:TreeNode>
                                 <asp:TreeNode Text="Inventario " Value="Inventario "></asp:TreeNode>
                             </asp:TreeNode>
-                            <asp:TreeNode Text="Agregar informacion " Value="ACERCA DE ">
+                            <asp:TreeNode Text="Agregar informacion " Value="ACERCA DE " Expanded="False">
                                 <asp:TreeNode Text="Clientes " Value="Clientes "></asp:TreeNode>
                                 <asp:TreeNode Text="Empleado " Value="Empleado "></asp:TreeNode>
                             </asp:TreeNode>
                             <asp:TreeNode Text="Consultas" Value="AYUDA " NavigateUrl="~/registro.aspx"></asp:TreeNode>
-                            <asp:TreeNode Text="Usuarios" Value="Usuarios">
+                            <asp:TreeNode Text="Usuarios" Value="Usuarios" Expanded="False">
                                 <asp:TreeNode Text="Nuevo usuario " Value="Nuevo usuario "></asp:TreeNode>
                                 <asp:TreeNode Text="Modificar usuario " Value="Modificar usuario "></asp:TreeNode>
                                 <asp:TreeNode Text="Cambiar contraseña" Value="Cambiar contraseña"></asp:TreeNode>
                             </asp:TreeNode>
-                            <asp:TreeNode Text="Ayuda " Value="Ayuda ">
+                            <asp:TreeNode Text="Ayuda " Value="Ayuda " Expanded="False">
                                 <asp:TreeNode Text="Temas de ayuda " Value="Temas de ayuda "></asp:TreeNode>
                                 <asp:TreeNode Text="Acerca de " Value="Acerca de "></asp:TreeNode>
                                 <asp:TreeNode Text="Acerca de autor " Value="Acerca de autor "></asp:TreeNode>
                             </asp:TreeNode>
                             <asp:TreeNode Text="Derechos de propiedad " Value="Derechos de propiedad "></asp:TreeNode>
-                            <asp:TreeNode NavigateUrl="~/registro.aspx" Text="Login" Value="Login">
-                                <asp:TreeNode NavigateUrl="~/usuarios.aspx" Text="agregar usuarios" Value="agregar usuarios"></asp:TreeNode>
-                                <asp:TreeNode NavigateUrl="~/Ayuda.aspx" Text="Ayuda" Value="Ayuda"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/Usuarios.aspx" Text="agregar usuarios" Value="agregar usuarios">
                                 <asp:TreeNode NavigateUrl="~/About.aspx" Text="Acerca de" Value="Acerca de"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Ayuda.aspx" Text="Ayuda" Value="Ayuda"></asp:TreeNode>
                             </asp:TreeNode>
-                            <asp:TreeNode NavigateUrl="~/Tablas.aspx" Text="Tablas" Value="Tablas"></asp:TreeNode>
+                            <asp:TreeNode NavigateUrl="~/Tablas.aspx" Text="Tabla_empl" Value="Tablas"></asp:TreeNode>
                         </Nodes>
                         <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
                         <ParentNodeStyle Font-Bold="False" />
@@ -111,20 +130,6 @@
                 <td class="auto-style3">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 <div class="auto-style7">
-                    INGRESAR<br />
-                    o<br />
-&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Usuario
-                    <asp:TextBox ID="TextBox3" runat="server" Width="131px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br />
-                    Contraseña <asp:TextBox ID="TextBox4" runat="server" Width="164px"></asp:TextBox>
-                    <br />
-                    <br />
-                    <asp:Button ID="Button1" runat="server" Text="Ingresar" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="Button2" runat="server" Text="Olvide mi usuario o contraseña" Width="183px" />
-                    <br />
                     <br />
                     <br />
                     <br />
@@ -151,6 +156,8 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
+                <td class="auto-style15">
+                    &nbsp;</td>
                 <td class="auto-style6" colspan="3">
                     <span class="auto-style11">
                     <br />

@@ -62,7 +62,7 @@ namespace Grupo_3_primer_proyecto_web
                 {
                     Session["autorizado"] = usuario;
                     //Session("autorizado") = usuario;
-                    Response.Redirect("~/usuarios.aspx");
+                    Response.Redirect("~/Principal.aspx");
                     
                     //Cerramos la conexion
                     conexion.Close();
@@ -74,11 +74,6 @@ namespace Grupo_3_primer_proyecto_web
 
             }
 
-        }
-
-        protected void btHome_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Principal.aspx");
         }
     }
 }
