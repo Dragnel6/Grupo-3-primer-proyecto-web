@@ -113,8 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="App_Start\imagenes\pizza hd full.jpg" />
-    <Content Include="App_Start\Styles\StyleSheet1.css" />
+    <Content Include="Styles\StyleSheet1.css" />
     <Content Include="App_Start\PAGINA PRINCIPAL.aspx" />
     <Content Include="Ayuda.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -125,7 +124,6 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="form_prueba.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -135,6 +133,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="imagen\imagen.restau.jpg" />
     <Content Include="Principal.aspx" />
     <Content Include="registro.aspx" />
     <None Include="Properties\Settings.settings">
@@ -210,13 +209,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="form_prueba.aspx.cs">
-      <DependentUpon>form_prueba.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="form_prueba.aspx.designer.cs">
-      <DependentUpon>form_prueba.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

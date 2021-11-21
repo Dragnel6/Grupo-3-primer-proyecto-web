@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+   <link href="StylesSheet1.css" rel="stylesheet" type="text/css" /> 
     <style type="text/css">
         .auto-style1 {
             width: 100%;
@@ -34,11 +35,17 @@
             text-align: center;
             height: 121px;
         }
+        .auto-style11 {
+            margin-left: 0px;
+        }
     </style>
+     
 </head>
+   
 <body>
     <form id="form1" runat="server">
         <div>
+            
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style9" colspan="2">
@@ -48,6 +55,7 @@
                     <td class="auto-style9" colspan="2">
                         &nbsp;</td>
                 </tr>
+               
                 <tr>
                     <td class="auto-style9" colspan="2">
                         &nbsp;</td>
@@ -93,6 +101,8 @@
                     </td>
                 </tr>
             </table>
+          
+           
         </div>
     </form>
 </body>
