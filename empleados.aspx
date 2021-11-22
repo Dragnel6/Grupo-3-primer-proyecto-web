@@ -168,7 +168,7 @@
         <td class="auto-style56">
                         <asp:SqlDataSource ID="SqlDataSource_emple" runat="server" ConnectionString="<%$ ConnectionStrings:sistemaConnectionString %>" SelectCommand="SELECT [IDempleado], [nombre], [apellidos], [telefono], [dui], [correo] FROM [empleados]"></asp:SqlDataSource>
                     </td>
-        <td class="auto-style47" colspan="4">Editar empleados</td>
+        <td class="auto-style47" colspan="4">&nbsp;</td>
     </tr>
     <tr>
         <td class="auto-style52">
@@ -202,7 +202,7 @@
         <td class="auto-style56">
                         &nbsp;</td>
         <td class="auto-style28" colspan="2">
-                        <asp:Button ID="btGuardar" runat="server" Height="39px" OnClick="btGuardar_Click" Text="Guardar Cambios" Width="152px" />
+                        <asp:Button ID="btGuardar" runat="server" Height="39px" OnClick="btGuardar_Click" Text="Guardar Edicion" Width="152px" />
         </td>
         <td class="auto-style28" colspan="2">
                         <asp:Button ID="btEliminar" runat="server" Height="41px" OnClick="btEliminar_Click" Text="Eliminar empleado" Width="152px" />

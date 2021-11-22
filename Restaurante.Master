@@ -120,6 +120,7 @@
                                 <asp:TreeNode NavigateUrl="~/Tablas.aspx" Text="Tabla_empl" Value="Tablas"></asp:TreeNode>
                                 <asp:TreeNode NavigateUrl="~/Ayuda.aspx" Text="Ayuda" Value="Ayuda"></asp:TreeNode>
                                 <asp:TreeNode NavigateUrl="~/About.aspx" Text="Acerca de" Value="Acerca de"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/empleados.aspx" Text="Empleados" Value="Empleados"></asp:TreeNode>
                             </asp:TreeNode>
                         </Nodes>
                         <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />

@@ -109,6 +109,13 @@ namespace Grupo_3_primer_proyecto_web
             
             if (datos.Read())
             {
+                txtCodigo.Text = datos["IDempleado"].ToString();
+                txtNombre.Text = datos["nombre"].ToString();
+                txtApell.Text = datos["apellidos"].ToString();
+                txtDui.Text = datos["dui"].ToString();
+                txtTelef.Text = datos["telefono"].ToString();
+                txtCorreo.Text = datos["correo"].ToString();
+
                 /*txtCodigo.Text = datos("IDempleado");
                 txtNombre.Text = datos("nombre");
                 txtApell.Text = datos("apellidos");
@@ -131,10 +138,10 @@ namespace Grupo_3_primer_proyecto_web
         protected void btGuardar_Click(object sender, EventArgs e)
         {
             // Incorporamos la cadena de conexion usando el origen de la tabla empleado 
-            var conexion = new SqlConnection(this.SqlDataSource_emple.ConnectionString);
+            SqlConnection conexion = new SqlConnection(this.SqlDataSource_emple.ConnectionString);
 
             // Creamos la variable de consulta_comprobar y le asignamos la cadena de consulta Aqui comparamos si el codigo ya ha sido asignado 
-            var consulta_comprobar = new SqlCommand("SELECT Count(*) FROM empleados WHERE IDempleado = @codigo", conexion);
+            SqlCommand consulta_comprobar = new SqlCommand("SELECT * FROM empleados WHERE IDempleado = @codigo", conexion);
 
             // Abrimos la conexión'
             conexion.Open();
@@ -147,7 +154,7 @@ namespace Grupo_3_primer_proyecto_web
             // Creamos la variable i para contar los registros encontrados 
             int registros;
             // Con la funcion ExecuteScalar determinamos cuantos registros hay 'Si tenemos al menos uno es que ya existe un empleado con el codigo 
-            registros = (int)consulta_comprobar.ExecuteScalar();
+            registros = System.Convert.ToInt32(consulta_comprobar.ExecuteScalar());
 
             {
                 // Tomamos la desicion si existe o no 
@@ -159,16 +166,16 @@ namespace Grupo_3_primer_proyecto_web
                     // Cerramos la conexión
                     conexion.Close();
                 }
-
-                // #################################################################################
-
-                // Si El usuario no existe, lo añadimos, se ejecuta la condicional else 
                 else
                 {
+                    // #################################################################################
+
+                    // Si El usuario no existe, lo añadimos, se ejecuta la condicional else 
 
                     // Creamos la variable donde almacenamos la cadena de consulta "Que en este caso es una instruccion Insert Into para guardar en la tabla empleado
                     string consulta;
-                    consulta = "update empleado set(nombre=@nombre, apellidos=@apellido, dui=@dui, telefono=@telefono, correo=@correo)" + "where IDempleado=" + txtCodigo.Text + "";
+                    //consulta = "update empleados set(nombre=@nombre, apellidos=@apellido, dui=@dui, telefono=@telefono, correo=@correo where @codigo=)" + txtCodigo.Text + "";
+                    consulta = "UPDATE empleados set IDempleado = @codigo, nombre=@nombre, apellidos=@apellido, dui=@dui, telefono=@telefono, correo=@correo WHERE @codigo=" + txtCodigo.Text + "";
 
                     // Ejecutamos la consulta usando la funcion SQL Command 
                     SqlCommand consulta_agregar = new SqlCommand(consulta, conexion);
@@ -190,7 +197,7 @@ namespace Grupo_3_primer_proyecto_web
                         conexion.Close();
 
                         // Presentamos el mensaje que se agrego con exito el nuevo usuario 
-                        this.lblEmpl.Text = "Se agregó el nuevo empleado correctamente";
+                        this.lblEmpl.Text = "Se guardo el nuevo empleado correctamente";
                     }
 
                     // La funcion Catch permite capturar cualquier error al intentar guardar 
@@ -230,12 +237,12 @@ namespace Grupo_3_primer_proyecto_web
             // Con la funcion ExecuteScalar determinamos cuantos registros hay
             // Si tenemos al menos uno es que ya existe un empleado con el codigo
 
-            registros = ((int)consulta_comprobar.ExecuteScalar());
+            registros = System.Convert.ToInt32(consulta_comprobar.ExecuteScalar());
 
             // Tomamos la desicion si existe o no
             if (registros > 0)
             {
-                string eliminar = "delete from empleados where codigo = " + txtCodigo.Text + "";
+                string eliminar = "delete from empleados WHERE IDempleado = " + txtCodigo.Text + "";
 
                 // Ejecucion de consulta
                 SqlCommand consulta_eliminar = new SqlCommand(eliminar, conexion);
@@ -266,8 +273,6 @@ namespace Grupo_3_primer_proyecto_web
 
                 // Cerramos la conexión
                 conexion.Close();
-
-
             }
 
         }
