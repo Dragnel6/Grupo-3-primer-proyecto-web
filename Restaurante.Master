@@ -14,10 +14,10 @@
             width: 100%;
         }
         .auto-style2 {
-            width: 255px;
+            width: 250px;
         }
         .auto-style3 {
-            width: 812px;
+            width: 955px;
         }
         .auto-style6 {
             height: 23px;
@@ -27,11 +27,11 @@
             text-align: center;
         }
         .auto-style8 {
-            width: 255px;
+            width: 250px;
             height: 137px;
         }
         .auto-style9 {
-            width: 812px;
+            width: 955px;
             height: 137px;
             text-align: center;
             font-size: xx-large;
@@ -44,7 +44,7 @@
         }
         .auto-style12 {
             font-size: xx-large;
-            width: 127px;
+            width: 955px;
         }
         .auto-style13 {
             font-size: xx-large;
@@ -52,23 +52,23 @@
         }
         .auto-style14 {
             font-size: xx-large;
-            width: 255px;
+            width: 250px;
         }
         .auto-style15 {
             height: 23px;
             text-align: center;
-            width: 88px;
+            width: 1px;
         }
         .auto-style16 {
-            width: 88px;
+            width: 1px;
             height: 137px;
         }
         .auto-style18 {
-            width: 88px;
+            width: 1px;
         }
         .auto-style19 {
             font-size: xx-large;
-            width: 88px;
+            width: 1px;
         }
     </style>
 </head>
@@ -117,10 +117,10 @@
                             </asp:TreeNode>
                             <asp:TreeNode Text="Derechos de propiedad " Value="Derechos de propiedad "></asp:TreeNode>
                             <asp:TreeNode NavigateUrl="~/Usuarios.aspx" Text="agregar usuarios" Value="agregar usuarios">
-                                <asp:TreeNode NavigateUrl="~/About.aspx" Text="Acerca de" Value="Acerca de"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/Tablas.aspx" Text="Tabla_empl" Value="Tablas"></asp:TreeNode>
                                 <asp:TreeNode NavigateUrl="~/Ayuda.aspx" Text="Ayuda" Value="Ayuda"></asp:TreeNode>
+                                <asp:TreeNode NavigateUrl="~/About.aspx" Text="Acerca de" Value="Acerca de"></asp:TreeNode>
                             </asp:TreeNode>
-                            <asp:TreeNode NavigateUrl="~/Tablas.aspx" Text="Tabla_empl" Value="Tablas"></asp:TreeNode>
                         </Nodes>
                         <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
                         <ParentNodeStyle Font-Bold="False" />

@@ -27,17 +27,21 @@
             height: 26px;
         }
         .auto-style24 {
+            width: 586px;
             height: 26px;
-            width: 296px;
         }
         .auto-style25 {
-            width: 296px;
+            width: 586px;
+        }
+        .auto-style26 {
+            width: 948px;
+            height: 137px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p>
-    <table class="auto-style16">
+    <table class="auto-style26">
         <tr>
             <td class="auto-style21">Tabla de empleados</td>
             <td class="auto-style24"></td>

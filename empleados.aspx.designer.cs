@@ -11,97 +11,115 @@ namespace Grupo_3_primer_proyecto_web
 {
 
 
-    public partial class usuarios
+    public partial class empleados
     {
 
         /// <summary>
-        /// Control form1.
+        /// Control lblEmpl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label lblEmpl;
 
         /// <summary>
-        /// Control btPrincipal.
+        /// Control txtCodigo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btPrincipal;
+        protected global::System.Web.UI.WebControls.TextBox txtCodigo;
 
         /// <summary>
-        /// Control txtUsuario.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// Control ddlTipo.
+        /// Control txtApell.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTipo;
+        protected global::System.Web.UI.WebControls.TextBox txtApell;
 
         /// <summary>
-        /// Control SqlDataSource2.
+        /// Control txtDui.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        protected global::System.Web.UI.WebControls.TextBox txtDui;
 
         /// <summary>
-        /// Control txtClave.
+        /// Control txtTelef.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClave;
+        protected global::System.Web.UI.WebControls.TextBox txtTelef;
 
         /// <summary>
-        /// Control txtClaveCon.
+        /// Control txtCorreo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtClaveCon;
+        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
 
         /// <summary>
-        /// Control btRegistrar.
+        /// Control btAgregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btRegistrar;
+        protected global::System.Web.UI.WebControls.Button btAgregar;
 
         /// <summary>
-        /// Control SqlDataSource1.
+        /// Control SqlDataSource_emple.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_emple;
 
         /// <summary>
-        /// Control lblUsuarios.
+        /// Control GbEmpleados.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblUsuarios;
+        protected global::System.Web.UI.WebControls.GridView GbEmpleados;
+
+        /// <summary>
+        /// Control btGuardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btGuardar;
+
+        /// <summary>
+        /// Control btEliminar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btEliminar;
     }
 }
